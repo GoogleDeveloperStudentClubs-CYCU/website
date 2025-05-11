@@ -1,13 +1,12 @@
 import Link from 'next/link';
-import { Github, Linkedin, Twitter, Instagram, Mail, Facebook } from 'lucide-react';
+import { Github, Linkedin, Twitter, Instagram, Mail, MessageCircleMore } from 'lucide-react';
 import { GdgLogo } from '@/components/icons/GdgLogo';
 
 const socialLinks = [
-  { Icon: Github, href: 'https://github.com/gdg-on-campus', label: 'GitHub' },
-  { Icon: Linkedin, href: 'https://linkedin.com/company/gdg-on-campus', label: 'LinkedIn' },
-  { Icon: Twitter, href: 'https://twitter.com/gdg_on_campus', label: 'Twitter / X' },
-  { Icon: Instagram, href: 'https://instagram.com/gdg_on_campus', label: 'Instagram' },
-  { Icon: Facebook, href: 'https://facebook.com/gdgoncampus', label: 'Facebook' },
+  { Icon: Github, href: 'https://github.com/GoogleDeveloperStudentClubs-CYCU', label: 'GitHub' },
+  { Icon: Linkedin, href: 'https://www.linkedin.com/company/%E4%B8%AD%E5%8E%9F%E5%A4%A7%E5%AD%B8%E9%96%8B%E6%BA%90%E8%BB%9F%E9%AB%94%E9%96%8B%E7%99%BC%E7%A4%BE-x-gdg-on-campus-cycu/', label: 'LinkedIn' },
+  { Icon: Instagram, href: 'https://www.instagram.com/gdg.on.campus_cycu', label: 'Instagram' },
+  { Icon: MessageCircleMore, href: 'https://discord.gg/JvgVxre5xt', label: 'Discord' },
 ];
 
 export function Footer() {
@@ -18,17 +17,17 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <GdgLogo />
-              <span className="font-semibold text-lg">GDG On Campus Hub</span>
+              <span className="font-semibold text-lg">GDG On Campus CYCU</span>
             </Link>
             <p className="text-muted-foreground text-sm">
-              Connecting students with Google technologies and developer communities.
+              一群熱愛資訊技術的中原大學學生開發者社群
             </p>
           </div>
           <div>
             <h3 className="font-semibold mb-4">Contact Us</h3>
-            <a href="mailto:contact@gdgoncampus.org" className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors">
+            <a href="mailto:cycugdsc@gmail.com" className="flex items-center text-sm text-muted-foreground hover:text-primary transition-colors">
               <Mail className="mr-2 h-4 w-4" />
-              contact@gdgoncampus.org
+              cycugdsc@gmail.com
             </a>
           </div>
           <div>
@@ -43,7 +42,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} GDG On Campus Hub. All rights reserved.
+          © {new Date().getFullYear()} GDG On Campus CYCU. All rights reserved.
         </div>
       </div>
     </footer>

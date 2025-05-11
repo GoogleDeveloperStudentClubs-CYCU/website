@@ -6,6 +6,7 @@ import type { LucideIcon } from 'lucide-react';
 import { Button } from './ui/button';
 
 export interface SocialLink {
+  Id: number;
   Icon: LucideIcon;
   url: string;
   label: string;
@@ -43,8 +44,8 @@ export function TeamMemberCard({ member }: TeamMemberCardProps) {
         </p>
       </CardContent>
       <CardFooter className="justify-center space-x-3 pt-4">
-        {member.socialLinks.map(({ Icon, url, label }) => (
-          <Button key={url} variant="outline" size="icon" asChild>
+        {member.socialLinks.map(({ Id, Icon, url, label }) => (
+          <Button key={Id} variant="outline" size="icon" asChild>
             <Link href={url} target="_blank" rel="noopener noreferrer" aria-label={label}>
               <Icon className="h-5 w-5" />
             </Link>

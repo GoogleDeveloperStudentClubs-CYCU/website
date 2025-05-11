@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { GdgLogo } from '@/components/icons/GdgLogo';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
+import { Menu, ExternalLink } from 'lucide-react';
 
 const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/team', label: 'Team' },
-  { href: '/ai-intro-generator', label: 'AI Intro Generator' },
+  { href: '/', label: '首頁' },
+  { href: '/team', label: '核心團隊' },
+  { Icon: ExternalLink, href: 'https://discord.gg/JvgVxre5xt', label: '加入我們的 Discord' }
 ];
 
 export function Header() {
@@ -17,18 +17,21 @@ export function Header() {
         <Link href="/" className="mr-8 flex items-center space-x-2">
           <GdgLogo />
           <span className="font-bold sm:inline-block">
-            GDG On Campus Hub
+            GDG On Campus CYCU
           </span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-          {navItems.map((item) => (
+          {navItems.map(({ Icon, href, label }) => (
             <Link
-              key={item.href}
-              href={item.href}
+              key={href}
+              href={href}
               className="transition-colors hover:text-foreground/80 text-foreground/60"
             >
-              {item.label}
+              {label}
+              {Icon && (
+                        <Icon className="ml-1 h-4 w-4 inline" />
+              )}
             </Link>
           ))}
         </nav>
@@ -46,17 +49,20 @@ export function Header() {
               <Link href="/" className="mr-8 flex items-center space-x-2 mb-8">
                 <GdgLogo />
                 <span className="font-bold">
-                  GDG On Campus Hub
+                  GDG On Campus CYCU
                 </span>
               </Link>
                 <nav className="flex flex-col space-y-4">
-                  {navItems.map((item) => (
+                  {navItems.map(({ Icon, href, label }) => (
                     <Link
-                      key={item.href}
-                      href={item.href}
+                      key={href}
+                      href={href}
                       className="text-lg font-medium transition-colors hover:text-primary"
                     >
-                      {item.label}
+                      {label}
+                      {Icon && (
+                        <Icon className="ml-1 h-4 w-4 inline" />
+                      )}
                     </Link>
                   ))}
                 </nav>

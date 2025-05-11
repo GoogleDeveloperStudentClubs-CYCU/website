@@ -1,6 +1,19 @@
 import type { SVGProps } from 'react';
+import Image, {StaticImageData} from 'next/image';
+import logo from '@/image/GDG On Campus - Centered - Small - Square.jpg';
 
 export function GdgLogo(props: SVGProps<SVGSVGElement>) {
+
+  return (
+    <Image
+      src={logo as StaticImageData}
+      alt="GDG Logo"
+      width={40}
+      height={40}
+      className="rounded-full"
+    />
+  );
+
   return (
     <svg
       width="40"
