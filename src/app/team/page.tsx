@@ -10,10 +10,10 @@ const LeadteamMembers: TeamMember[] = [
     imageUrl: 'https://2.gravatar.com/avatar/feef4421f4052a6fe1c0391b0cafd938fa6756e252b29a05af9519b35d15a214?size=256&d=initials',
     imageHint: "male student",
     socialLinks: [
-      { Id: 1, Icon: Linkedin, url: '#', label: 'LinkedIn' },
+      { Id: 1, Icon: Linkedin, url: 'https://www.linkedin.com/in/乙家-黃-a95b7a114/', label: 'LinkedIn' },
       { Id: 2, Icon: Github, url: 'https://github.com/ja-errorpro', label: 'GitHub' },
       { Id: 3, Icon: Globe, url: 'https://ja-errorpro.codes/', label: 'Blog' },
-      { Id: 4, Icon: Instagram, url: '#', label: 'Instagram'},
+      { Id: 4, Icon: Instagram, url: 'https://instagram.com/compile.err0r', label: 'Instagram'},
     ],
   },
 ];
